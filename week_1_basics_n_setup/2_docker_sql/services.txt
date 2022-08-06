@@ -32,3 +32,5 @@ python ingest_data.py \
     --db=ny_taxi \
     --table_name=yellow_taxi_tirps \
     --url=${url}
+
+URL="https://s3.amazonaws.com/nyc-tlc/trip+data/yellow_tripdata_2021-01.csv"
