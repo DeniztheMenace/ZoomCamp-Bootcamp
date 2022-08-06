@@ -14,14 +14,12 @@ if __name__ == "__main__":
     parser.add_argument('--host', help='host for postgres')
     parser.add_argument('--post', help='port for postgres')
     parser.add_argument('--db', help='database name for postgres')
-    parser.add_argument('--table-name', help='user name for postgres')
+    parser.add_argument('--table_name', help='user name for postgres')
     parser.add_argument('--url', help='url of the csv')
 
     args = parser.parse_args()
 
     main(args)
-
-
 
 def main(params):
     user = params.user
