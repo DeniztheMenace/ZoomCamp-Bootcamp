@@ -1,14 +1,19 @@
 services:
+  #Set up the database
   pgdatabase:
     image: postgres:13
+    #Specify the environment
     environment:
       - POSTGRES_USER=root
       - POSTGRES_PASSWORD=root
       - POSTGRES_DB=ny_taxi
+    #Specify the volume
     volumes:
       - "./ny_taxi_postgres_data:/var/lib/postgresql/data:rw"
+    #Specify the port
     ports:
       - "5432:5432"
+  #Set up the pgadmin page
   pgadmin:
     image: dpage/pgadmin4
     environment:
